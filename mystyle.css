@@ -2,9 +2,47 @@
     box-sizing: border-box;
 }
 
-.nameSection {
-    font-size: 2.35em;
+body {
+    background-color: white;
+    margin-left: 0px;
+    margin-right: 0px;
 }
+
+/* Navbar */
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+ul li {
+    float: left;
+}
+
+li a {
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: black;
+    font-size: 1.2em;
+}
+
+li a:hover:not(.active) {
+    background-color: #ababf9;
+}
+
+.active {
+    background-color: #ababf9;
+}
+
+/* Main Title */
 
 .mainTitle {
     font-size: 4.2em;
@@ -15,40 +53,40 @@
     padding: 13%;
 }
 
-.specificSection {
-    background-color: #ababf9; overflow: hidden;
+/* Title of each section */
+
+h3 {
+    font-size: 2.35em;
+}
+
+/* Dimension and color of each section */
+
+.specificSectionDimension {
     padding: 6%;
     width: 100%;
     height: 33.33%;
+    overflow: hidden;
+}
+
+.specificSection {
+    background-color: #ababf9; 
 }
 
 .specificSectionMethod {
     background-color: white; 
-    overflow: hidden;
-    padding: 6%;
-    width: 100%;
-    height: 33.33%;
 }
 
+/* Size of text and color in each section */
 .changeText {
     font-size: 1.5em;
-}
-
-ol {
-    text-align: justify;
 }
 
 .imageType {
     height: 400px; 
     border-radius: 10%;
-    /* width: 100px; */
 }
 
-body {
-    background-color: white;
-    margin-left: 0px;
-    margin-right: 0px;
-}
+/* Size of columns in all document */
 
 .col-1 {width: 8.33%;}
 .col-2 {width: 16.66%;}
@@ -68,54 +106,7 @@ body {
     padding: 15px;
 }
 
-.row::after {
-    content: "";
-    clear: both;
-    display: table;
-}
-
-
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: white;
-    position: fixed;
-    top: 0;
-    width: 100%;
-}
-
-li {
-    float: left;
-}
-
-li a {
-    display: block;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    color: black;
-}
-
-li a:hover:not(.active) {
-    background-color: #ababf9;
-}
-
-.active {
-    background-color: #ababf9;
-}
-
-footer {
-    text-align: center;
-}
-
-.github {
-    text-decoration: none;
-    color: red;
-    font-weight: bold;
-}
-
+/* TABLE */
 table, tbody {
     width: 50%;
     text-align: center;
@@ -124,41 +115,36 @@ table, tbody {
     border-collapse: collapse;
 }
 
-tr td {
+tr td, tr th {
     padding: 10px;
 }
 
+/* Make a specific column different */
 td:nth-child(1) {
     font-weight: bold;
 }
 
-tbody > tr:nth-child(even) {
+tbody > tr:nth-child(even), thead > tr {
     background-color: #edff8e80;
 }
 
-tbody > tr:nth-child(odd) {
+tbody > tr:nth-child(odd), tfoot > tr {
     background-color: #a6b1f0b3;
 }
 
-tfoot > tr > td {
+/* First and last row make different */
+tfoot > tr {
     font-weight: bold;
     font-size: 1.1em;
-
-}
-
-tfoot > tr {
     border-top: 1px solid black;
-    background-color: #a6b1f0b3;
-
 }
 
-thead > tr > th {
+thead > tr {
     border-bottom: 1px solid black;
-    background-color: #edff8e80;
     font-size: 1.1em;
-    padding: 10px;
 }
 
+/* Change color for element 'a' in text */
 .aInText {
     text-decoration: none;
     color: blue;
@@ -166,4 +152,15 @@ thead > tr > th {
 
 .aInText:hover {
     color: red;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+}
+
+.github {
+    text-decoration: none;
+    color: red;
+    font-weight: bold;
 }
