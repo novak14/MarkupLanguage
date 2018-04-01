@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
+    <title>Bakalářská práce</title>
+</head>
+
+<body>
+    <header>
+        <nav id="menu">
+            <ul>
+                <li>
+                    <a class="moveToSection active" href="#main">Obrazek uvodni</a>
+                </li>
+                <li>
+                    <a class="moveToSection" href="#target">Cíl práce</a>
+                </li>
+                <li>
+                    <a class="moveToSection" href="#methodic">Metodika</a>
+                </li>
+                <li>
+                    <a class="moveToSection" href="#practicalPart">Praktická část</a>
+                </li>
+                <li>
+                    <a class="moveToSection" href="#theoreticalPart">Teoretická část</a>
+                </li>
+                <li>
+                    <a class="moveToSection" href="#makeElse">Výsledky porovnání</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <article>
+            <section class="specificSection" id="main">
+                <h1 class="mainTitle">Porovnání nástrojů pro přístup k databázi na platformě .NET</h1>
+            </section>
+            <section id="target" class="specificSectionMethod">
+                <img src="~/../pictures/cil.png" class="imageType col-4">
+                <div class="col-8">
+                    <h3 class="nameSection">Cíl práce</h3>
+                    <div class="changeText">
+                        <p>Hlavním cílem této bakalářské práce je analyzovat efektivnost různých nástrojů pro práci s databází
+                            na platformě .NET. Dílčími cíli jsou: </p>
+                        <ol type="a">
+                            <li>Charakteristika platformy .NET</li>
+                            <li>Charakteristika jednotlivých nástrojů pro práci s databází</li>
+                            <li>Vytvoření aplikace pro měření efektivnosti jednotlivých nástrojů</li>
+                            <li>Na základě výsledků zhodnotit využití jednotlivých nástrojů ve vymezené oblasti</li>
+                        </ol>
+                    </div>
+                </div>
+            </section>
+
+            <section id="methodic" class="specificSection">
+                <div class="changeBlock col-8">
+                    <h3 class="nameSection">Metodika</h3>
+                    <div class="changeText">
+                        <p>
+                            Metodika řešené problematiky bakalářské práce je založena na studiu a analýze odborných informačních zdrojů. V praktické
+                            části bude navržena a implementována aplikace. Na základě vytvořené aplikace budou jednotlivé
+                            nástroje testovány v oblasti výkonu práce s databází. Dále bude sloužit k hodnocení efektivnosti
+                            kódu jednotlivých nástrojů ve vymezené oblasti. Na základě syntézy teoretických poznatků a výsledků
+                            praktické části budou formulovány závěry bakalářské práce.
+                        </p>
+                    </div>
+                </div>
+                <img src="~/../pictures/methododlogy.jpeg" class="imageType col-4">
+            </section>
+
+            <section id="practicalPart" class="specificSectionMethod">
+                <img src="~/../pictures/aspnetcore.png" class="imageType col-4">
+                <div class="col-8">
+                    <h3 class="nameSection">Praktická část</h3>
+                    <div class="changeText">
+                        <p>
+                            V praktické části se vytvoří aplikace, která bude schopna měřit efektivitu přístupu do databáze MSSQL pomocí několika metod.
+                            Aplikace bude postavena na ASP.NET CORE. Aplikace bude poskytovat i webové uživatelské rozhraní,
+                            kde bude možnost zapnout test pro různé metody, anebo pro všechny najednou. Rychlost čtení a
+                            zápisu do databáze, pro účel bakalářské práce bude vždy prováděno za stejných podmínek. To znamená
+                            na stejném počítači a opakování čtení a zápisů budou vždy stejné.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="theoreticalPart" class="specificSection">
+                <div class="col-8">
+                    <h3 class="nameSection">Teoretická část</h3>
+                    <div class="changeText">
+                        <p>
+                            V teoretické části se zaměřím ze začátku na vývoj ASP.NET CORE oproti jiným verzím .NETu. Kde bych chtěl popsat jak odlišná
+                            je tato verze od .NET Frameworku. V další části se zaměřím na typický přístup do databáze a o
+                            kolik je náročnější oproti speciálním ORM, kteří dokážou pomocí málo kódu splnit stejný cíl.
+                            Poté už se zaměřím na různé ORM, kde budu popisovat jaké rozdíly mezi nimi jsou. Nakonec bych
+                            se zmínil o rychlosti jednotlivých přístupů a jestli vyšší rychlost v některých případech stojí
+                            za větší náročnost programování.
+                        </p>
+                    </div>
+                </div>
+                <img src="~/../pictures/teoretic.jpg" class="imageType col-4">
+            </section>
+
+            <section id="makeElse" class="specificSectionMethod">
+                <table class="col-7">
+                    <thead>
+                        <tr>
+                            <th>Počet iterací</th>
+                            <th>Entity Framework (ms)</th>
+                            <th>Dapper (ms)</th>
+                            <th>ADO.NET (ms)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>1.64</td>
+                            <td>0.38</td>
+                            <td>0.01</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>0.56</td>
+                            <td>0.03</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>0.17</td>
+                            <td>0.02</td>
+                            <td>0.01</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>1.01</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>1.15</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>1.14</td>
+                            <td>0.02</td>
+                            <td>0.02</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>0.67</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>0.55</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>0.37</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>0.44</td>
+                            <td>0.02</td>
+                            <td>0</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td>Průměr</td>
+                            <td>0,77</td>
+                            <td>0.047</td>
+                            <td>0.013</td>
+                        </tr>
+                    </tfoot>
+                </table>
+                <div class="col-5">
+                        <h3 class="nameSection">Výsledky k porovnání</h3>
+                        <div class="changeText">
+                            <p>
+                                V tabulce jsou vidět výsledky, které provedl Matthew Jones na stránce <a class="aInText" href="https://exceptionnotfound.net/dapper-vs-entity-framework-vs-ado-net-performance-benchmarking/">ExceptionNotFound</a> z těchto dat je vidět, že ADO.NET je v tomto případě nejrychlejší. Nicméně existují i situace, kdy tomu tak není. Rád bych v mé bakalářské práci provedl stejné měření, abych mohl porovnat výsledky.
+                            </p>
+                        </div>
+                    </div>
+            </section>
+
+        </article>
+    </main>
+
+    <footer>
+        Vytvořeno Marcelem Novákem
+        <a class="github" href="https://github.com/novak14">Github</a>
+    </footer>
+</body>
+<script src="~/../myJS.js"></script>
+
+</html>
