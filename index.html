@@ -1,19 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cs">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="normalize.css">
     <link rel="stylesheet" type="text/css" href="mystyle.css">
-
     <title>Bakalářská práce</title>
 </head>
 
-<body>
+<body itemscope itemtype="http://schema.org/WebPage">
     <header>
-        <nav id="menu">
+        <nav itemprop="breadcrumb" id="menu">
             <ul>
                 <li>
                     <a class="moveToSection active" href="#main">Úvod</a>
@@ -37,18 +35,17 @@
         </nav>
     </header>
 
-    <main>
+    <main itemprop="mainContentOfPage">
 
-        <article>
-            <div itemscope class="specificSectionDimension specificSection" id="main">
-                <h1 class="mainTitle">Porovnání nástrojů pro přístup k databázi na platformě .NET</h1>
-            </div>
-
-            <section id="target" class="specificSectionDimension specificSectionMethod">
-                <img src="~/../pictures/cil.png" class="imageType col-4">
+        <article itemscope itemtype="http://schema.org/Blog">
+            <section class="specificSection" id="main">
+                <h1 itemprop="headline" class="mainTitle">Porovnání nástrojů pro přístup k databázi na platformě .NET</h1>
+            </section>
+            <section id="target" class="specificSectionMethod">
+                <img itemprop="image" src="~/../pictures/cil.png" class="imageType col-4">
                 <div class="col-8">
-                    <h3>Cíl práce</h3>
-                    <div class="changeText">
+                    <h3 itemprop="headline" class="nameSection">Cíl práce</h3>
+                    <div itemprop="text" class="changeText">
                         <p>Hlavním cílem této bakalářské práce je analyzovat efektivnost různých nástrojů pro práci s databází
                             na platformě .NET. Dílčími cíli jsou: </p>
                         <ol type="a">
@@ -61,11 +58,11 @@
                 </div>
             </section>
 
-            <section id="methodic" class="specificSectionDimension specificSection">
+            <section id="methodic" class="specificSection">
                 <div class="changeBlock col-8">
-                    <h3>Metodika</h3>
+                    <h3 itemprop="headline" class="nameSection">Metodika</h3>
                     <div class="changeText">
-                        <p>
+                        <p itemprop="text">
                             Metodika řešené problematiky bakalářské práce je založena na studiu a analýze odborných informačních zdrojů. V praktické
                             části bude navržena a implementována aplikace. Na základě vytvořené aplikace budou jednotlivé
                             nástroje testovány v oblasti výkonu práce s databází. Dále bude sloužit k hodnocení efektivnosti
@@ -74,15 +71,15 @@
                         </p>
                     </div>
                 </div>
-                <img src="~/../pictures/methododlogy.jpeg" class="imageType col-4">
+                <img itemprop="image" src="~/../pictures/methododlogy.jpeg" class="imageType col-4">
             </section>
 
-            <section id="practicalPart" class="specificSectionDimension specificSectionMethod">
-                <img src="~/../pictures/aspnetcore.png" class="imageType col-4">
+            <section id="practicalPart" class="specificSectionMethod">
+                <img  itemprop="image" src="~/../pictures/aspnetcore.png" class="imageType col-4">
                 <div class="col-8">
-                    <h3>Praktická část</h3>
+                    <h3 itemprop="headline" class="nameSection">Praktická část</h3>
                     <div class="changeText">
-                        <p>
+                        <p itemprop="text">
                             V praktické části se vytvoří aplikace, která bude schopna měřit efektivitu přístupu do databáze MSSQL pomocí několika metod.
                             Aplikace bude postavena na ASP.NET CORE. Aplikace bude poskytovat i webové uživatelské rozhraní,
                             kde bude možnost zapnout test pro různé metody, anebo pro všechny najednou. Rychlost čtení a
@@ -93,11 +90,11 @@
                 </div>
             </section>
 
-            <section id="theoreticalPart" class="specificSectionDimension specificSection">
+            <section id="theoreticalPart" class="specificSection">
                 <div class="col-8">
-                    <h3>Teoretická část</h3>
+                    <h3 itemprop="headline" class="nameSection">Teoretická část</h3>
                     <div class="changeText">
-                        <p>
+                        <p itemprop="text">
                             V teoretické části se zaměřím ze začátku na vývoj ASP.NET CORE oproti jiným verzím .NETu. Kde bych chtěl popsat jak odlišná
                             je tato verze od .NET Frameworku. V další části se zaměřím na typický přístup do databáze a o
                             kolik je náročnější oproti speciálním ORM, kteří dokážou pomocí málo kódu splnit stejný cíl.
@@ -107,10 +104,10 @@
                         </p>
                     </div>
                 </div>
-                <img src="~/../pictures/teoretic.jpg" class="imageType col-4">
+                <img itemprop="image" src="~/../pictures/teoretic.jpg" class="imageType col-4">
             </section>
 
-            <section id="makeElse" class="specificSectionDimension specificSectionMethod">
+            <section id="makeElse" class="specificSectionMethod">
                 <table class="col-7">
                     <thead>
                         <tr>
@@ -192,26 +189,24 @@
                     </tfoot>
                 </table>
                 <div class="col-5">
-                    <h3>Výsledky k porovnání</h3>
-                    <div class="changeText">
-                        <p>
-                            V tabulce jsou vidět výsledky, které provedl Matthew Jones na stránce
-                            <a class="aInText" href="https://exceptionnotfound.net/dapper-vs-entity-framework-vs-ado-net-performance-benchmarking/">ExceptionNotFound</a> z těchto dat je vidět, že ADO.NET je v tomto případě nejrychlejší. Nicméně
-                            existují i situace, kdy tomu tak není. Rád bych v mé bakalářské práci provedl stejné měření,
-                            abych mohl porovnat výsledky.
-                        </p>
+                        <h3 itemprop="headline" class="nameSection">Výsledky k porovnání</h3>
+                        <div class="changeText">
+                            <p itemprop="text">
+                                V tabulce jsou vidět výsledky, které provedl Matthew Jones na stránce <a itemprop="url" class="aInText" href="https://exceptionnotfound.net/dapper-vs-entity-framework-vs-ado-net-performance-benchmarking/">ExceptionNotFound</a> z těchto dat je vidět, že ADO.NET je v tomto případě nejrychlejší. Nicméně existují i situace, kdy tomu tak není. Rád bych v mé bakalářské práci provedl stejné měření, abych mohl porovnat výsledky.
+                            </p>
+                        </div>
                     </div>
-                </div>
             </section>
 
         </article>
     </main>
 
-    <footer>
-        Vytvořeno Marcelem Novákem
-        <a class="github" href="https://github.com/novak14">Github</a>
+    <footer itemscope itemtype="http://schema.org/WPFooter">
+        <p itemprop="author">Vytvořeno Marcelem Novákem <a itemprop="url" class="github" href="https://github.com/novak14">Github</a></p>
+        
     </footer>
+    <script src="~/../myJS.js"></script>
+
 </body>
-<script src="~/../myJS.js"></script>
 
 </html>

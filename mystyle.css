@@ -31,7 +31,6 @@ li a {
     padding: 14px 16px;
     text-decoration: none;
     color: black;
-    font-size: 1.2em;
 }
 
 li a:hover:not(.active) {
@@ -55,25 +54,29 @@ li a:hover:not(.active) {
 
 /* Title of each section */
 
-h3 {
+.nameSection {
     font-size: 2.35em;
 }
 
 /* Dimension and color of each section */
 
-.specificSectionDimension {
-    padding: 6%;
-    width: 100%;
-    height: 33.33%;
-    overflow: hidden;
+ol {
+    text-align: justify;
 }
 
 .specificSection {
-    background-color: #ababf9; 
+    background-color: #ababf9; overflow: hidden;
+    padding: 6%;
+    width: 100%;
+    height: 33.33%;
 }
 
 .specificSectionMethod {
     background-color: white; 
+    overflow: hidden;
+    padding: 6%;
+    width: 100%;
+    height: 33.33%;
 }
 
 /* Size of text and color in each section */
@@ -115,7 +118,7 @@ table, tbody {
     border-collapse: collapse;
 }
 
-tr td, tr th {
+tr td {
     padding: 10px;
 }
 
@@ -124,24 +127,26 @@ td:nth-child(1) {
     font-weight: bold;
 }
 
-tbody > tr:nth-child(even), thead > tr {
+tbody > tr:nth-child(even) {
     background-color: #edff8e80;
 }
 
-tbody > tr:nth-child(odd), tfoot > tr {
+tbody > tr:nth-child(odd) {
     background-color: #a6b1f0b3;
 }
 
 /* First and last row make different */
 tfoot > tr {
-    font-weight: bold;
-    font-size: 1.1em;
     border-top: 1px solid black;
+    background-color: #a6b1f0b3;
+
 }
 
-thead > tr {
+thead > tr > th {
     border-bottom: 1px solid black;
+    background-color: #edff8e80;
     font-size: 1.1em;
+    padding: 10px;
 }
 
 /* Change color for element 'a' in text */
